@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수학박사 master 3.0 · 서술형 문제를 알기 쉽게 풀어가는 웹 수학교구</title>
+<meta name="description" content="2019 경기도교육자료전 수상작 '수학박사 master2.0'을 2022 개정 교육과정 초등 수학 1~6학년 전 영역으로 확장한 웹 수학교구">
+<link rel="icon" href="assets/photos/mascot.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#d9b27a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>
+  /* 개발 중(localhost)에는 캐시를 피하고, 배포 시에는 고정 버전을 씁니다 */
+  var V = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? Date.now() : '3.0.1';
+  ['base', 'board', 'place', 'lab', 'game'].forEach(function (f) { document.write('<link rel="stylesheet" href="css/' + f + '.css?v=' + V + '">'); });
+</script>
+</head>
+<body>
+<header id="top">
+  <div class="bar">
+    <a class="brand" href="#/home" aria-label="수학박사 master 3.0 홈">
+      <img src="assets/photos/mascot.jpg" alt="수학박사 마스코트">
+      <span><b>수학박사 master 3.0</b><small>서술형 문제를 알기 쉽게 풀어가는 웹 수학교구</small></span>
+    </a>
+    <nav class="tabs" id="nav" aria-label="주 메뉴"></nav>
+    <label class="tgl" title="글자를 키우고 정답 보기·시범 버튼을 보여 줍니다"><input type="checkbox" id="teacherTgl"> 교사 시범 모드</label>
+  </div>
+</header>
+<main id="app"></main>
+<footer>
+  <p>원작: 〈덧셈, 뺄셈 서술형 문제를 알기 쉽게 풀어가는 수학박사 master2.0〉 — 제66회(2019) 경기도교육자료전 수학(초등) 분야 입상작 · 황의준, 김원형</p>
+  <p>2022 개정 교육과정(교육부 고시 제2022-33호) 초등 수학 성취기준 기반 · 이 웹앱은 브라우저에서만 동작하며 학습 기록은 이 기기에만 저장됩니다.</p>
+</footer>
+<script>
+  ['standards-data', 'util', 'standards', 'problems-core', 'problems-num', 'problems-other', 'figures', 'comp', 'app', 'board', 'place', 'lab', 'game', 'sheet', 'diagnose', 'about', 'main']
+    .forEach(function (f) { document.write('<script src="js/' + f + '.js?v=' + V + '"><\/script>'); });
+</script>
+</body>
+</html>

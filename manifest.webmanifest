@@ -1,0 +1,15 @@
+{
+  "name": "수학박사 master 3.0",
+  "short_name": "수학박사",
+  "description": "서술형 문제를 알기 쉽게 풀어가는 웹 수학교구 — 2022 개정 교육과정 초등 수학 1~6학년",
+  "lang": "ko",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8ec",
+  "theme_color": "#d9b27a",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,70 @@
+/* 조작 놀이터 */
+.labbox { display: grid; gap: 14px; }
+.lab-card { display: grid; gap: 12px; }
+.lab-card h3 { margin: 0; color: var(--sky-d); }
+.stp { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 2px solid var(--line); border-radius: 999px; padding: 3px 6px 3px 12px; }
+.stp b { font-size: .85rem; color: var(--muted); } .stp .stv { min-width: 2.2em; text-align: center; font-family: var(--font-h); font-size: 1.2rem; }
+.bigeq { font-family: var(--font-h); font-size: 1.5rem; margin: .3em 0; color: var(--ink); word-break: keep-all; }
+.digital { font-family: var(--font-h); font-size: 2.2rem; letter-spacing: .08em; background: #1b1f2a; color: #6dfc9a; display: inline-block; padding: 2px 16px; border-radius: 10px; margin: 0 0 8px; }
+.rng { flex: 1 1 200px; accent-color: var(--sky); height: 28px; }
+.gfig { display: flex; justify-content: center; background: #f8fcff; border: 2px dashed #bfe3f7; border-radius: 12px; padding: 8px; overflow-x: auto; }
+.gfig .fig { min-width: 280px; max-width: 460px; }
+
+/* 큰 수 */
+.bgrid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.bg4 { background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 4px 6px 6px; }
+.bg4h { text-align: center; font-family: var(--font-h); color: var(--sky-d); font-size: 1.1rem; }
+.bg4c { display: flex; gap: 3px; }
+.bcell { width: 44px; text-align: center; border-radius: 8px; background: var(--pc); padding: 2px 0 4px; }
+.bcell small { display: block; font-size: .62rem; font-weight: 700; color: #3a2c00; opacity: .8; } .bcell b { font-family: var(--font-h); font-size: 1.6rem; font-weight: 400; color: #243044; }
+.bcell.lead { opacity: .22; }
+.bigin { font: 400 1.6rem var(--font-h); letter-spacing: .06em; width: min(100%, 360px); }
+.readk { font-size: 1.15rem; background: var(--yellow-l); border-radius: 12px; padding: 8px 14px; border: 2px solid var(--yellow); }
+.plist { margin: 0; padding-left: 20px; columns: 2; font-size: .92rem; }
+
+/* 배열 */
+.dots { display: grid; grid-template-columns: repeat(var(--c), 24px); gap: 6px; justify-content: center; padding: 12px; background: #fff; border-radius: 12px; border: 2px dashed var(--line); }
+.dots i { width: 24px; height: 24px; border-radius: 50%; display: block; box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .18); } .dots i.m { outline: 3px solid var(--ink); outline-offset: 1px; }
+.groups { display: flex; flex-wrap: wrap; gap: 10px; padding: 12px; background: #fff; border-radius: 12px; border: 2px dashed var(--line); }
+.grp { display: flex; flex-wrap: wrap; gap: 3px; width: 92px; padding: 6px; border-radius: 12px; border: 3px solid var(--gc, #868e96); background: color-mix(in srgb, var(--gc, #868e96) 10%, #fff); }
+.grp i { width: 14px; height: 14px; border-radius: 50%; background: var(--gc, #868e96); } .grp.rest { --gc: #868e96; border-style: dashed; }
+
+/* 분수 */
+.fbarw { margin: 4px 0; } .fbarw small { font-weight: 700; color: var(--muted); }
+.fb2 { display: flex; height: 34px; border: 3px solid var(--ink); border-radius: 8px; overflow: hidden; background: #fff; max-width: 440px; }
+.fb2 i { flex: 1; border-right: 2px solid var(--ink); } .fb2 i:last-child { border-right: 0; }
+.wb { display: grid; gap: 4px; } .cmpbars { display: grid; gap: 10px; }
+.fctl b { min-width: 5.5em; }
+
+/* 소수 */
+.dgrids { display: flex; flex-wrap: wrap; gap: 8px; }
+.g100 { display: grid; grid-template-columns: repeat(10, 14px); gap: 1px; background: var(--ink); padding: 2px; border-radius: 4px; }
+.g100 i { width: 14px; height: 14px; background: #fff; display: block; }
+.gg { gap: 18px; }
+
+/* 시계 */
+.clockrow { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.clockrow .fig { width: 210px; } .fig .hand.s { stroke: #1c7ed6; stroke-width: 1.8; }
+
+/* 가능성 */
+.balls { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: #f3e6cb; border-radius: 40px 40px 16px 16px; border: 3px solid var(--wood-d); max-width: 300px; }
+.balls i { width: 28px; height: 28px; border-radius: 50%; box-shadow: inset -3px -4px 0 rgba(0, 0, 0, .2); }
+.dotc2 { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.cbars { display: flex; gap: 10px; align-items: flex-end; height: 120px; padding: 4px 10px; background: #fff; border: 2px dashed var(--line); border-radius: 12px; }
+.cb { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch; gap: 2px; text-align: center; } .cb i { display: block; min-height: 2px; transition: height .4s; border-radius: 5px 5px 0 0; } .cb small { font-weight: 700; }
+
+/* 비율 */
+.hbar { display: flex; height: 38px; border: 3px solid var(--ink); border-radius: 10px; overflow: hidden; background: #fff; margin: 6px 0; max-width: 520px; }
+.hbar i { display: grid; place-items: center; font-style: normal; font-weight: 800; color: #fff; font-size: .85rem; border-right: 2px solid rgba(255, 255, 255, .8); } .hbar:not(.split) i { color: #1b1f2a; }
+.dnl .hbar:nth-child(2) i:first-child { color: #fff; }
+.dnl2 { display: grid; gap: 8px; } .nl { display: flex; align-items: center; gap: 10px; background: #fff; border-radius: 12px; padding: 8px 12px; border: 2px solid var(--line); } .nl b { min-width: 3em; } .nl span, .nl .qq2 { font-family: var(--font-h); font-size: 1.6rem; background: var(--sky-l); border-radius: 10px; padding: 0 14px; } .nl .qq2 { background: var(--yellow); color: var(--red); }
+
+/* 규칙 */
+.machine { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.machine .mi { background: var(--sky-l); border: 3px solid var(--sky); border-radius: 14px; padding: 8px 16px; font-weight: 800; } .machine .mi.o { background: var(--yellow-l); border-color: var(--yellow-d); }
+.machine .mb { background: var(--wood); border: 4px solid var(--wood-d); border-radius: 16px; padding: 10px 22px; font-family: var(--font-h); font-size: 1.7rem; box-shadow: var(--shadow); position: relative; }
+.machine .mb::before, .machine .mb::after { content: '➜'; position: absolute; top: 50%; transform: translateY(-50%); color: var(--sky-d); font-size: 1.4rem; } .machine .mb::before { left: -26px; } .machine .mb::after { right: -26px; }
+table.xy th, table.xy td { text-align: center; min-width: 38px; font-family: var(--font-h); font-size: 1.2rem; }
+
+/* 놀이터 목록 */
+.labtool .big { font-size: 2.6rem; line-height: 1; margin: 6px 0; } .labtool { min-height: 190px; }
