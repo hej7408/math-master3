@@ -2,8 +2,8 @@
 const CACHE = 'mathdoctor-3.0.1';
 const ASSETS = [
   './', './index.html', './manifest.webmanifest',
-  './css/base.css?v=3.0.1', './css/board.css?v=3.0.1', './css/place.css?v=3.0.1', './css/lab.css?v=3.0.1', './css/game.css?v=3.0.1',
-  ...['standards-data', 'util', 'standards', 'problems-core', 'problems-num', 'problems-other', 'figures', 'comp', 'app', 'board', 'place', 'lab', 'game', 'sheet', 'diagnose', 'about', 'main'].map((f) => `./js/${f}.js?v=3.0.1`),
+  './css/base.css?v=3.0.1', './css/board.css?v=3.0.1', './css/place.css?v=3.0.1', './css/lab.css?v=3.0.1', './css/game.css?v=3.0.1', './css/quest.css?v=3.0.1',
+  ...['standards-data', 'util', 'standards', 'problems-core', 'problems-num', 'problems-other', 'figures', 'comp', 'app', 'quest', 'board', 'place', 'lab', 'game', 'sheet', 'diagnose', 'about', 'main'].map((f) => `./js/${f}.js?v=3.0.1`),
   './assets/icon-192.png', './assets/icon-512.png', './assets/photos/mascot.jpg',
 ];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting())); });

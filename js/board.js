@@ -245,6 +245,7 @@ const STEPS = ['그림 붙이기', '분류하기', '식 세우기', '세로식 �
         const stars = B.demoUsed ? 0 : B.wrong <= 1 && B.hints === 0 ? 3 : B.wrong <= 4 ? 2 : 1; B.stars = stars;
         U.store.record(B.p.std, B.p.grade, stars >= 1);
         if (stars > 1) { const d = U.store.load(); d.stars += stars - 1; U.store.save(d); }
+        if (stars > 0 && MD.quest) MD.quest.event('board', 1, stars);
       }
       function checkBack(p) {
         const f = p.final, c = p.calc;

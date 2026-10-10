@@ -68,7 +68,7 @@
         const fin = C.finalInput(p, { onSubmit: submit });
         function submit() {
           const r = (p.final.type === 'num' && fin.read().v === '') ? { ok: false, msg: '답을 써 보세요.' } : P.checkFinal(p, fin.read());
-          if (r.ok) { G.stars[k]++; G.pos[k] = Math.min(N - 1, G.pos[k] + 1); G.log.push(`${cfg.names[k]}: 정답! ⭐+1, 1칸 전진`); U.store.record(p.std, p.grade, true); if (G.pos[k] >= N - 1) { G.over = true; G.q = null; return draw(); } next(); }
+          if (r.ok) { G.stars[k]++; G.pos[k] = Math.min(N - 1, G.pos[k] + 1); G.log.push(`${cfg.names[k]}: 정답! ⭐+1, 1칸 전진`); U.store.record(p.std, p.grade, true); if (MD.quest) { MD.quest.event('correct', 1, { dom: p.domain }); MD.quest.addXP(4); } if (G.pos[k] >= N - 1) { G.over = true; G.q = null; return draw(); } next(); }
           else { q.tries++; q.msg = q.tries >= 2 ? '정답은 ' + p.ansText + ' 였어요. 다음에 도전!' : r.msg; if (q.tries >= 2) { G.log.push(`${cfg.names[k]}: 아쉬워요 (정답 ${p.ansText})`); U.store.record(p.std, p.grade, false); q.done = true; } draw(); }
         }
         return h('div', { class: 'card gq', style: { borderColor: PCOL[k] } }, h('div', { class: 'row' }, h('span', { class: 'pbadge', style: { background: PCOL[k], color: '#fff', padding: '2px 12px', borderRadius: '999px', fontFamily: 'var(--font-h)' } }, cfg.names[k] + ' 문제'), h('span', { class: 'pill' }, S.DOMAINS[p.domain].icon + ' ' + S.DOMAINS[p.domain].name)),

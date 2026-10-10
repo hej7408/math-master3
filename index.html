@@ -14,7 +14,7 @@
 <script>
   /* 개발 중(localhost)에는 캐시를 피하고, 배포 시에는 고정 버전을 씁니다 */
   var V = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? Date.now() : '3.0.1';
-  ['base', 'board', 'place', 'lab', 'game'].forEach(function (f) { document.write('<link rel="stylesheet" href="css/' + f + '.css?v=' + V + '">'); });
+  ['base', 'board', 'place', 'lab', 'game', 'quest'].forEach(function (f) { document.write('<link rel="stylesheet" href="css/' + f + '.css?v=' + V + '">'); });
 </script>
 </head>
 <body>
@@ -34,7 +34,7 @@
   <p>2022 개정 교육과정(교육부 고시 제2022-33호) 초등 수학 성취기준 기반 · 이 웹앱은 브라우저에서만 동작하며 학습 기록은 이 기기에만 저장됩니다.</p>
 </footer>
 <script>
-  ['standards-data', 'util', 'standards', 'problems-core', 'problems-num', 'problems-other', 'figures', 'comp', 'app', 'board', 'place', 'lab', 'game', 'sheet', 'diagnose', 'about', 'main']
+  ['standards-data', 'util', 'standards', 'problems-core', 'problems-num', 'problems-other', 'figures', 'comp', 'app', 'quest', 'board', 'place', 'lab', 'game', 'sheet', 'diagnose', 'about', 'main']
     .forEach(function (f) { document.write('<script src="js/' + f + '.js?v=' + V + '"><\/script>'); });
 </script>
 </body>

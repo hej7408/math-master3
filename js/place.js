@@ -75,7 +75,7 @@
         }
         if (S.cur < 0) finish();
       }
-      function finish() { S.done = true; try { const e = S.op === '×' ? ['4수01-04'] : S.D ? ['4수01-16'] : S.T > 3 ? ['4수01-03'] : ['2수01-06']; U.store.record(e, S.T > 3 ? 3 : 2, true); } catch (x) {} }
+      function finish() { S.done = true; try { const e = S.op === '×' ? ['4수01-04'] : S.D ? ['4수01-16'] : S.T > 3 ? ['4수01-03'] : ['2수01-06']; U.store.record(e, S.T > 3 ? 3 : 2, true); if (MD.quest && !S.hinted) MD.quest.event('place', 1); } catch (x) {} }
 
       /* ---------- 도구 모음 ---------- */
       function drawTools() {
